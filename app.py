@@ -164,11 +164,9 @@ def send_sos():
     })
 
 
-
+  create_table()
 
 # Start Application
 if __name__ == "__main__":
-
-    create_table()
 
     app.run(debug=True)
