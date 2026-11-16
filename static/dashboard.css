@@ -1,0 +1,463 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f4fc;
+    display: flex;
+}
+
+
+/* Sidebar */
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #45205f;
+    padding: 30px 20px;
+    position: fixed;
+}
+
+.sidebar h2 {
+    color: white;
+    margin-bottom: 40px;
+}
+
+.sidebar a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.sidebar a:hover {
+    background-color: #7138a8;
+}
+
+
+/* Main Content */
+
+.main {
+    margin-left: 250px;
+    padding: 35px;
+    width: calc(100% - 250px);
+}
+
+.topbar {
+    margin-bottom: 35px;
+}
+
+.topbar h2 {
+    color: #45205f;
+    margin-bottom: 10px;
+}
+
+
+/* SOS Section */
+
+.sos-section {
+    background-color: white;
+    padding: 35px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.06);
+}
+
+.sos-section h2 {
+    color: #45205f;
+    margin-bottom: 10px;
+}
+
+.sos-button {
+    background-color: #e53945;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 25px;
+    cursor: pointer;
+}
+
+.sos-button:hover {
+    background-color: #b71c1c;
+}
+
+.sos-text {
+    color: #666;
+}
+
+
+/* Information Cards */
+
+.cards {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+    flex: 1;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.06);
+}
+
+.card h3 {
+    color: #7138a8;
+    margin-bottom: 20px;
+}
+
+.card p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.card button,
+.journey button {
+    background-color: #7138a8;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.safe {
+    color: green !important;
+}
+
+
+/* Journey */
+
+.journey {
+    background-color: white;
+    padding: 30px;
+    margin-top: 30px;
+    border-radius: 15px;
+}
+
+.journey h2 {
+    color: #45205f;
+    margin-bottom: 15px;
+}
+
+.journey p {
+    margin-bottom: 20px;
+}
+
+
+/* Mobile Responsive */
+
+@media (max-width: 768px) {
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    body {
+        display: block;
+    }
+
+    .main {
+        margin-left: 0;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+}
+/* Map Section */
+
+.map-section {
+    background-color: white;
+    padding: 30px;
+    margin-top: 30px;
+    border-radius: 15px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.06);
+}
+
+.map-section h2 {
+    color: #45205f;
+    margin-bottom: 12px;
+}
+
+.map-section p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+#map {
+    height: 400px;
+    width: 100%;
+    border-radius: 12px;
+}
+
+.tracking-buttons {
+    margin-top: 20px;
+}
+
+.tracking-buttons button {
+    background-color: #7138a8;
+    color: white;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+/* Emergency Help Center */
+
+.helpline-section {
+
+    background: white;
+
+    padding: 30px;
+
+    margin-top: 30px;
+
+    border-radius: 18px;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+
+}
+
+.helpline-section > h2 {
+
+    color: #51266d;
+
+    text-align: center;
+
+}
+
+.helpline-section > p {
+
+    text-align: center;
+
+    color: #777;
+
+}
+
+.helpline-cards {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+
+    margin-top: 25px;
+
+}
+
+.helpline-card {
+
+    background: #f8f4fc;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    border: 1px solid #eee;
+
+    transition: 0.3s;
+
+}
+
+.helpline-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+
+}
+
+.helpline-icon {
+
+    font-size: 35px;
+
+}
+
+.helpline-card h3 {
+
+    color: #51266d;
+
+}
+
+.helpline-card h2 {
+
+    color: #e63946;
+
+    font-size: 32px;
+
+    margin: 12px 0;
+
+}
+
+.helpline-card p {
+
+    color: #666;
+
+}
+
+.helpline-card button {
+
+    background: #7138a8;
+
+    color: white;
+
+    border: none;
+
+    padding: 12px 25px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+}
+
+.helpline-card button:hover {
+
+    background: #51266d;
+
+}
+
+.emergency-card {
+
+    border: 2px solid #ffcccc;
+
+    background: #fff5f5;
+
+}
+
+.emergency-card button {
+
+    background: #e63946;
+
+}
+
+.emergency-card button:hover {
+
+    background: #c1121f;
+
+}
+
+.helpline-note {
+
+    margin-top: 25px;
+
+    font-weight: bold;
+
+}
+
+
+/* Mobile Responsive Design */
+
+@media (max-width: 600px) {
+
+    .helpline-cards {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+/* National Emergency - Highlighted Section */
+.main-emergency {
+    background: #fff1f1;
+    border: 2px solid #ffb3b3;
+    border-radius: 15px;
+    padding: 25px;
+    margin: 25px 0;
+    text-align: center;
+}
+
+.main-emergency h3 {
+    color: #51266d;
+    font-size: 22px;
+}
+
+.main-emergency h1 {
+    color: #e63946;
+    font-size: 42px;
+    margin: 10px 0;
+}
+
+.main-emergency p {
+    color: #666;
+    font-size: 16px;
+}
+
+/* Other Emergency Helplines Heading */
+.helpline-heading {
+    color: #51266d;
+    margin: 25px 0;
+    text-align: center;
+}
+
+/* Call Buttons */
+.call-button {
+    display: inline-block;
+    background: #7138a8;
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.call-button:hover {
+    background: #51266d;
+}
+
+/* National Emergency Call Button */
+.emergency-button {
+    background: #e63946;
+}
+
+.emergency-button:hover {
+    background: #c1121f;
+}
+#riskLevel {
+
+    width: 100%;
+
+    padding: 10px;
+
+    margin: 10px 0;
+
+    border: 1px solid #ccc;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+}
+
+#riskResult {
+
+    margin-top: 15px;
+
+    font-weight: bold;
+
+    line-height: 1.6;
+
+}

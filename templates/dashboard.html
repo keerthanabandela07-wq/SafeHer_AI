@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SafeHer AI - Dashboard</title>
+
+    <!-- Leaflet Map CSS -->
+    <link rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+    <!-- Dashboard CSS -->
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='dashboard.css') }}">
+
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+
+    <div class="sidebar">
+
+        <h2>🛡️ SafeHer AI</h2>
+
+        <a href="dashboard.html">🏠 Dashboard</a>
+
+        <a href="#">📍 Live Tracking</a>
+
+        <a href="#">👥 Trusted Contacts</a>
+
+        <a href="#">🤖 AI Risk Detection</a>
+
+        <a href="#">⚙️ Settings</a>
+
+    </div>
+
+
+    <!-- Main Dashboard -->
+
+    <div class="main">
+
+        <div class="topbar">
+
+            <h2>Welcome Back! 👋</h2>
+
+            <p>Your Safety, Our Priority.</p>
+
+        </div>
+
+
+        <!-- SOS Section -->
+
+        <div class="sos-section">
+
+            <h2>Emergency Assistance</h2>
+
+            <p>Are you feeling unsafe? Get help immediately.</p>
+
+            <button class="sos-button" onclick="sendSOS()">
+
+                SOS
+
+            </button>
+            <div id="sosStatus"></div>
+
+            <p class="sos-text">Click for Emergency Assistance</p>
+
+        </div>
+        <!-- Emergency Assistance Center -->
+<div class="helpline-section">
+
+    <h2>🚨 Emergency Assistance</h2>
+    <p>Are you in an emergency? Help is just one call away.</p>
+
+    <!-- National Emergency -->
+    <div class="main-emergency">
+        <h3>National Emergency</h3>
+        <h1>112</h1>
+        <p>Immediate Emergency Assistance</p>
+        <a href="tel:112" class="call-button emergency-button">
+            📞 Call 112
+        </a>
+    </div>
+
+    <!-- Other Helplines -->
+    <h3 class="helpline-heading">Other Emergency Helplines</h3>
+
+    <div class="helpline-cards">
+
+        <div class="helpline-card">
+            <h3>👩 Women Helpline</h3>
+            <h2>181</h2>
+            <p>Support and assistance for women</p>
+            <a href="tel:181" class="call-button">📞 Call Now</a>
+        </div>
+
+        <div class="helpline-card">
+            <h3>🚔 Women Police</h3>
+            <h2>1091</h2>
+            <p>Police assistance for women</p>
+            <a href="tel:1091" class="call-button">📞 Call Now</a>
+        </div>
+
+        <div class="helpline-card">
+            <h3>🚑 Ambulance</h3>
+            <h2>108</h2>
+            <p>Medical emergency assistance</p>
+            <a href="tel:108" class="call-button">📞 Call Now</a>
+        </div>
+
+    </div>
+
+    <p class="helpline-note">
+        💜 Your safety matters. Don't hesitate to seek help.
+    </p>
+
+</div>
+        
+
+
+        <!-- Information Cards -->
+
+        <div class="cards">
+
+            <div class="card">
+
+                <h3>📍 My Location</h3>
+
+                <p id="location">Location not detected</p>
+
+                <button onclick="getLocation()">
+
+                    Get Location
+
+                </button>
+
+            </div>
+
+
+            <div class="card">
+
+    <h3>🤖 AI Safety Assessment</h3>
+
+    <p>Select your current situation:</p>
+
+    <select id="riskLevel">
+
+        <option value="">Select your situation</option>
+
+        <option value="safe">I am feeling safe</option>
+
+        <option value="uncomfortable">I feel uncomfortable</option>
+
+        <option value="unsafe">I feel unsafe</option>
+
+        <option value="danger">I am in immediate danger</option>
+
+    </select>
+
+    <button onclick="analyzeRisk()">
+        Check Risk
+    </button>
+
+    <p id="riskResult">Not yet analyzed</p>
+
+</div>
+
+            <div class="card">
+
+                <h3>👥 Trusted Contacts</h3>
+
+                <p>Manage your emergency contacts.</p>
+
+                <button onclick="window.location.href='/contacts'">
+
+                    View Contacts
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Journey Section -->
+
+        <div class="journey">
+
+            <h2>Journey Guardian 🗺️</h2>
+
+            <p>Plan your journey and keep your trusted contacts informed.</p>
+
+            <button onclick="alert('Journey planning coming soon!')">
+
+                Start Journey
+
+            </button>
+
+        </div>
+        <!-- Live Tracking Section -->
+
+<div class="map-section">
+
+    <h2>📍 Live Location Tracking</h2>
+
+    <p>Track your current location on the map.</p>
+
+    <div id="map"></div>
+
+    <div class="tracking-buttons">
+
+        <button onclick="startTracking()">
+            Start Tracking
+        </button>
+
+        <button onclick="stopTracking()">
+            Stop Tracking
+        </button>
+
+    </div>
+
+</div>
+
+    </div>
+
+ 
+<!-- Leaflet JavaScript Library -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<!-- Dashboard JavaScript -->
+<script src="{{ url_for('static', filename='dashboard.js') }}"></script>
+
+</body>
+</html>

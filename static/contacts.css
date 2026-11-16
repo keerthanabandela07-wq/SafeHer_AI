@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f4fc;
+    margin: 0;
+    padding: 30px;
+}
+
+.container {
+    max-width: 850px;
+    margin: auto;
+}
+
+h1 {
+    color: #51266d;
+}
+
+p {
+    color: #666;
+}
+
+.contact-form,
+.contact-list {
+    background: white;
+    padding: 25px;
+    margin-top: 25px;
+    border-radius: 15px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+
+input {
+    display: block;
+    width: 95%;
+    padding: 13px;
+    margin: 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+}
+
+button {
+    background-color: #7138a8;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.contact-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin-top: 15px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+}
+
+.contact-card h3 {
+    color: #51266d;
+}
+
+.delete-btn {
+    background-color: #e63946;
+}
+
+.back-btn {
+    display: inline-block;
+    margin-top: 25px;
+    color: #7138a8;
+    text-decoration: none;
+    font-weight: bold;
+}

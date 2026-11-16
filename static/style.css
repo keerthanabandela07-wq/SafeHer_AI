@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #faf7ff;
+}
+
+/* Navigation */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 8%;
+    background-color: white;
+}
+
+.logo {
+    color: #7138a8;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 15px;
+}
+
+nav a:hover {
+    color: #873bc0;
+}
+
+.login-btn {
+    padding: 10px 25px;
+    background-color: #7138a8;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* Hero Section */
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 10%;
+    min-height: 500px;
+}
+
+.hero-content {
+    width: 50%;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    color: #45205f;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #666;
+}
+
+.start-btn {
+    margin-top: 25px;
+    padding: 14px 30px;
+    background: #873bc0;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+/* Safety Card */
+
+.hero-image {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+.safety-card {
+    background: white;
+    padding: 60px 40px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+}
+
+.safety-card h2 {
+    font-size: 65px;
+}
+
+.safety-card h3 {
+    color: #7138a8;
+    margin: 15px 0;
+}
+
+/* Features */
+
+.features {
+    text-align: center;
+    padding: 60px 8%;
+}
+
+.features h2 {
+    color: #45205f;
+    margin-bottom: 35px;
+}
+
+.feature-container {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+}
+
+.feature-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    width: 30%;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.07);
+}
+
+.feature-card h3 {
+    color: #7138a8;
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    background: #45205f;
+    color: white;
+    padding: 20px;
+}

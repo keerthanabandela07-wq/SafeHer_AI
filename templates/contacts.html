@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Trusted Contacts - SafeHer AI</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='contacts.css') }}">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>👥 Trusted Contacts</h1>
+
+        <p>Add people who can help you during emergencies.</p>
+
+        <!-- Add Contact Form -->
+
+        <div class="contact-form">
+
+            <h2>Add New Contact</h2>
+
+            <form method="POST">
+
+                <input
+                type="text"
+                name="name"
+                placeholder="Enter contact name"
+                required>
+
+                <input
+                type="tel"
+                name="phone"
+                placeholder="Enter phone number"
+                pattern="[0-9]{10}"
+                maxlength="10"
+                required>
+
+                <button type="submit">
+                    Add Contact
+                </button>
+
+            </form>
+
+        </div>
+
+
+        <!-- Display Saved Contacts -->
+
+        <div class="contact-list">
+
+            <h2>Your Saved Contacts</h2>
+
+            {% if contacts %}
+
+                {% for contact in contacts %}
+
+                    <div class="contact-card">
+
+                        <div>
+
+                            <h3>{{ contact['name'] }}</h3>
+
+                            <p>{{ contact['phone'] }}</p>
+
+                        </div>
+
+                        <form method="POST"
+                        action="{{ url_for('delete_contact', contact_id=contact['id']) }}">
+
+                            <button type="submit" class="delete-btn">
+                                Delete
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                {% endfor %}
+
+            {% else %}
+
+                <p>No trusted contacts added yet.</p>
+
+            {% endif %}
+
+        </div>
+
+
+        <a href="/dashboard" class="back-btn">
+            ← Back to Dashboard
+        </a>
+
+    </div>
+
+</body>
+
+</html>
